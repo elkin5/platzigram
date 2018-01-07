@@ -1,0 +1,86 @@
+
+INICIALIZAR EL PROYECTO CON NPM
+npm init : lanza una consola que permite definir las propiedades del proyecto a desarrollar 
+es un json manifiest que permite identificar todo lo que usa nuestri proyecto.
+
+la version se maneja el primer numero para una version estable.
+1.0.0  version estable.
+0.1.0  primera version.
+
+entry point es la principal de nuestro project javascript, para el caso de uso node seria nuestro server
+server.js que se crea en el directorio raiz
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  se utiliza para los test, como el proyecto no tiene test, se elimina
+  
+  express.js libreria, un micro framework para crear servidores web
+  
+  se utiliza el comando: npm install --save express
+  
+  el --save lo que hace es agregar esa libreria como dependencia y la agrega al manifest json.
+  
+  crea un directorio llamado node_modules donde instala las dependencias no solo del proyev=cto si no
+  de cada dependencia en si.
+  
+  require permite buscar entre los modulos js
+  a la varible express le va a asignar lo que exporte el main del proyecto
+  
+  la variable expres me permite crear salidas y poner a escuchar 
+  
+  Se recomienda que si se necesita terminar un proceso es necesario terminarlo con process.exit(1)
+  el numero debe ser maypr a cero para que no haya un problema 
+  
+  para ejecutar el archivo, se utiuliza node server.js
+  
+  
+//cuando se acceda a dicha ruta se ejecute esa funcion
+app.get('/', function (req, resp) {
+    res.send('Hola Mundo');
+})
+
+//Se pone el puerto donde se ejecuta y es posible tambien la url por defecto localhost,
+ y la funcion en la cual se va a ejecutar si no se ejecuta bien
+app.listen(3000, function (err) {
+    if (err) return console.log('Hubo un error'), process.exit(1);
+
+    console.log('Platzigram escuchando en el puerto 3000')
+})
+
+bower otro gestor de paquetes
+
+un ensamblador de paquetes(package building)
+Se va a utilizar browserify
+nos permite agarrar el codigo nuestro y relacionarlo con las dependencias.
+un solo js el que contenga tanto nuestro codigo commo el de las dependencias. 
+un javascript, todo el proyecto.
+
+Sass para estilos css
+de una manera facil
+
+gulp : Gulp es una herramienta, en forma de script en NodeJS, que te ayuda a
+ automatizar tareas comunes en el desarrollo de una aplicación, como pueden ser: 
+ mover archivos de una carpeta a otra, eliminarlos, minificar código, sincronizar 
+ el navegador cuando modificas tu código, validar sintáxis y un largo etcétera
+gulp-sass : utilizar sass dentro del gulp
+
+es bueno poner las dependencias utiles para el desarroolo aparte
+para eso se utiliza --save-dev
+
+gulp contiene pipe o tuberias por donde va haciendo las cosas
+
+Con el archivo .scss se pueden sobre escribir propiedades del js de base o plantilla
+
+para correr el comando gulp es necesario tener instalado globalmente
+esto se hace con -g o --global
+
+cuando ejecutamos gulp desde la carperta de nuestro proyecto va abuscar el archivo Gulpfile
+y va a ejecutar la tarea que le pusimos por default que le designamos en este caso la de los estilos.
+
+para poder renombrar el archivo debemos kbajar la libreria gulp-rename
+
+Se pasa el js de la plantilla al archivo para tener un mejor control de ello y por mejores practicas
+
+preprocesador de css sass
