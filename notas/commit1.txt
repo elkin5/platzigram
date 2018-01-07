@@ -1,0 +1,43 @@
+Javascript es un universo muy grande.
+
+Sirve para todo.
+
+1. construyendo un proyecto.
+1.1 construir la primer pagina de la aplicacion
+.... libreria materializae http://materializecss.com/getting-started.html,
+	 permite organizar mas facil el codigo y ofrece material design.
+....con esto nos ahorramos el css y las grillas
+'''' filas que pueden tener hasta 12 colunmas o se define el tamano
+signup => registro 
+signin => iniciar sesion
+
+para que funcionen los efectos se debe tener jquery 
+https://code.jquery.com/
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+			
+Es la version minificada
+
+google font => contiene fuentes para agregar directamente a nuestros proyectos
+https://fonts.google.com/
+
+se puede modificar el cuerpo 
+{}
+una class #
+o una propiedad
+.nombre
+
+margin: 30px auto; => se utiliza para que se centre automaticamente
+
+.celular{
+    min-width: 100%;
+}
+se utiliza para agrandar o max- para achicar si esta muy grande
+
+se puden agregar mas fuentes con | nombre+nombre
+hover es cuando pasamos por encima
+cuando tiene 2 classe se utiliza clase.clase ejemplo btn.btn-new
+
+btn-flat quita el color 
