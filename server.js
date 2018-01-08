@@ -1,3 +1,5 @@
+// SIRVE PARA CREAR SERVER Y LEVANTAR
+
 var express = require('express');
 
 var app = express();

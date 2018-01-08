@@ -1,4 +1,4 @@
-
+﻿
 INICIALIZAR EL PROYECTO CON NPM
 npm init : lanza una consola que permite definir las propiedades del proyecto a desarrollar 
 es un json manifiest que permite identificar todo lo que usa nuestri proyecto.
@@ -24,8 +24,10 @@ server.js que se crea en el directorio raiz
   
   crea un directorio llamado node_modules donde instala las dependencias no solo del proyev=cto si no
   de cada dependencia en si.
-  
+
   require permite buscar entre los modulos js
+
+	\* ESTO PERMITE CREAR EL SERVIDOR
   a la varible express le va a asignar lo que exporte el main del proyecto
   
   la variable expres me permite crear salidas y poner a escuchar 
@@ -34,7 +36,7 @@ server.js que se crea en el directorio raiz
   el numero debe ser maypr a cero para que no haya un problema 
   
   para ejecutar el archivo, se utiuliza node server.js
-  
+  	 ESTO PERMITE CREAR EL SERVIDOR */
   
 //cuando se acceda a dicha ruta se ejecute esa funcion
 app.get('/', function (req, resp) {
