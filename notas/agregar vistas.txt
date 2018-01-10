@@ -1,0 +1,21 @@
+Single Paje Aplication SPA
+
+PUG (jade) : libreria para escribir menos codigo html
+un div se puede como un #container.col
+
+se debe informar al server para que reprocese las vistas
+
+para el llamado se utiliza el nombre y un objeto json con clave valor de la variables 
+# = id en pug
+ la index.pug se construye para todas las vistas que se desean
+ en el archivo .pug toca utilizar la identacion con espacios (convert identation to spaces)
+ 
+ hay que decirle antes de levantar los servicios que la carpeta donde estan los recursos existe
+ sirviendo de carpeta virtual.
+
+por seguridad la carpeta a la que solo van los recursos del cliente se denomina public
+por lo tanto gulp copia mias cosas a public al ejecutarlo
+
+favicon: es el icono ppal de nuestra aplicacion y debe ser representativo como marca
+favicon genera unos iconos para todos los dispositivos
+favicon generator

@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Todos los caracteres del iudioma se puedana ver de manera perfecta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Platzigram</title>
+  <!-- Todos los caracteres del iudioma se puedana ver de manera perfecta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Platzigram</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="resources/css/app.css">
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="resources/css/app.css">
 
-    <!-- _Tamaño toda la pagina, zoom inicial 1, no puede hacer zoom -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+
+  <!-- _Tamaño toda la pagina, zoom inicial 1, no puede hacer zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
 </head>
+
 <body>
 
-    <section id="main-container">
-        <!-- Clase de la libreria materialize que permite crear una grilla -->
-        <div class="container">
-            <div class="row">
-                <!-- columna q ocupa 10 y que se corre uno a la derecha -->
-                <div class="col s10 push-s1">
-                    <!-- Todas las filas contienen 12 columnas -->
-                    <div class="row">
-                        <!-- El tamano en dispositivos tablet y oculto en dispositivos pequenos -->
-                        <!-- Aca va la imagen -->
-                        <div class="col m5 hide-on-small-only">
-                            <img class="celular" src="resources/img/celular.png" alt="celular">
-                        </div>
-                        <!-- Aca va lo que acompana la imagen, un tamano para dispisitivos y otro para tablets -->
-                        <div class="col s12 m7">
-                            <div class="row">
-                                <div class="signup-box">
-                                    <h1 class="platzigram">Platzigram</h1>
-                                    <form class="signup-form">
-                                        <h2>Registrarse</h2>
-                                        <div class="section">
-                                            <!-- Lo oculta de dispositivos pequenos -->
-                                            <a class="btn btn-fb hide-on-small-only">Iniciar sesion con facebook</a>
-                                            <!-- Looculta de dispositivos medianos y grandes -->
-                                            <a class="btn btn-fb hide-on-med-and-up">Iniciar sesion</a>
-                                        </div>
-                                        <div class="divider"></div>
-                                        <div class="section">
-                                            <input type="email" name="email" placeholder="Correo electronico">
-                                            <input type="text" name="name" placeholder="Nombre completo">
-                                            <input type="text" name="username" placeholder="Usuario">
-                                            <input type="password" name="password" placeholder="Contrasena">
-                                            <!-- Boton con efecto de gota de materialize -->
-                                            <button class="btn waves-effect waves-ligth btn-signup" type="submit">Registrarse</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="login-box">
-                                    Tienes una cuenta? <a href="/signin">Entrar</a>
-                                </div>
-                            </div>
-                        </div>
+  <section id="main-container">
+    <!-- Clase de la libreria materialize que permite crear una grilla -->
+    <div class="container">
+      <div class="row">
+        <!-- columna q ocupa 10 y que se corre uno a la derecha -->
+        <div class="col s10 push-s1">
+          <!-- Todas las filas contienen 12 columnas -->
+          <div class="row">
+            <!-- El tamano en dispositivos tablet y oculto en dispositivos pequenos -->
+            <!-- Aca va la imagen -->
+            <div class="col m5 hide-on-small-only">
+              <img class="celular" src="resources/img/celular.png" alt="celular">
+            </div>
+            <!-- Aca va lo que acompana la imagen, un tamano para dispisitivos y otro para tablets -->
+            <div class="col s12 m7">
+              <div class="row">
+                <div class="signup-box">
+                  <h1 class="platzigram">Platzigram</h1>
+                  <form class="signup-form">
+                    <h2>Registrarse</h2>
+                    <div class="section">
+                      <!-- Lo oculta de dispositivos pequenos -->
+                      <a class="btn btn-fb hide-on-small-only">Iniciar sesion con facebook</a>
+                      <!-- Looculta de dispositivos medianos y grandes -->
+                      <a class="btn btn-fb hide-on-med-and-up">Iniciar sesion</a>
                     </div>
+                    <div class="divider"></div>
+                    <div class="section">
+                      <input type="email" name="email" placeholder="Correo electronico">
+                      <input type="text" name="name" placeholder="Nombre completo">
+                      <input type="text" name="username" placeholder="Usuario">
+                      <input type="password" name="password" placeholder="Contrasena">
+                      <!-- Boton con efecto de gota de materialize -->
+                      <button class="btn waves-effect waves-ligth btn-signup" type="submit">Registrarse</button>
+                    </div>
+                  </form>
                 </div>
+              </div>
+              <div class="row">
+                <div class="login-box">
+                  Tienes una cuenta?
+                  <a href="/signin">Entrar</a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 l3 center-align">
-                    <!-- Dropdown Trigger -->
-                    <a class='dropdown-button btn btn-flat' href='#' data-activates='dropdown1'>Idioma</a>
-                    
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!">Espanish</a>
-                        </li>
-                        <li>
-                            <a href="#!">English</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="col s12 l3 push-l6 center-align">
-                    2017 © Platzigram
-                </div>
-            </div>
-        </div>        
-    </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l3 center-align">
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-button btn btn-flat' href='#' data-activates='dropdown1'>Idioma</a>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li>
+              <a href="#!">Espanish</a>
+            </li>
+            <li>
+              <a href="#!">English</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col s12 l3 push-l6 center-align">
+          2017 © Platzigram
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
+
 </html>
