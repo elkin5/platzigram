@@ -1,0 +1,16 @@
+Browserify: para unr el codigo nuestro con el de las dependencias.
+Babel: permite usar la ultima version de js asi los navegadores no la soporten, actua como un traductor.
+
+ se deben instalar para poder utilizar y como herramientas de desarrollo
+ npm i --save-dev browserify babelify
+ npm i --save-dev babel
+ se utiliza babelify en lugar de babel para que pueda utilizarse junto a browserify
+ 
+ lo procesaremos con gulp para que al ejcutarlo nos quede un bundler(resultado) en la carpeta public
+ 
+ src = source= lib = donde quedara todo el codigo del cliente nuestro proyecto 
+ 
+ src/index.js = contiene toda la logica de nuestro proyecto
+ 
+ toca instalar vinyl-source-stream  esta libreria coje lo que nos devuelve bundle y lo convierte a algo que entienda gulp
+ cada vez que se anade una nueva tarea a gulp de debe ejecutar el comando en la terminal.
