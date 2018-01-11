@@ -1,0 +1,7 @@
+Single page application
+so paginas que no renderizan a  uevas paginas en bland¡co, todo se realiza en una misma pagina
+
+libreria page.js nos permmite navegar entre pagina y pagina entre aplicacion sin tner que recargarla
+npm i  --save page
+
+documento es la pagina 
