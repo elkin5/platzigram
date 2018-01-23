@@ -4,6 +4,7 @@ var rename = require('gulp-rename');
 var babel = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var watchify = require('watchify');
 
 // recibe el nombre de la tarea y la funcion
 // vamos a pedirle que coja un archivo y lo pase por el preprocesador de sass
@@ -21,16 +22,37 @@ gulp.task('assets', function () {
     .pipe(gulp.dest('public'))
 })
 
-//le pedimos que lo procese con babel
-// y que generfe un bundle (resumen)
-gulp.task('scripts', function () {
-  browserify('./src/index.js')
-    .transform(babel)  
-    .bundle()         
-    .pipe(source('index.js'))
-    .pipe(rename('app.js'))
-    .pipe(gulp.dest('public'))
+function compile(watch) {
+  var bundle = watchify(browserify('./src/index.js'));
+
+  //le pedimos que lo procese con babel
+  // y que generfe un bundle (resumen)
+  function rebundle() {
+    bundle
+      .transform(babel)
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(rename('app.js'))
+      .pipe(gulp.dest('public'))
+  }
+
+  if (watch) {
+    bundle.on('update', function () {
+      console.log('--> Bundling....');
+      rebundle();
+    })
+  }
+
+  rebundle();
+}
+
+gulp.task('build', function () {
+  return compile();
+})
+
+gulp.task('watch', function () {
+  return compile(true);
 })
 
 //Tarea por defecto, recible un array que puede ejecutar varias tareas
-gulp.task('default', ['styles', 'assets', 'scripts'])
+gulp.task('default', ['styles', 'assets', 'build'])

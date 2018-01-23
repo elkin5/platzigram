@@ -1221,7 +1221,7 @@ page('/signup', function (ctx, next) {
 });
 
 page('/signin', function (ctx, next) {
-  main.innerHTML = 'Signin <a href="/No-exixte">No existe</a>';
+  main.innerHTML = 'Signin <a href="/">Home</a>';
 });
 
 page.start();

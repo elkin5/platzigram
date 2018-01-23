@@ -1,0 +1,34 @@
+tener que ejecutar gulp y levantar el server cada vea que realicemos y¡un cambio en el codigo es
+muy molesto asi que se hara uso de la libreria script para automatzar 
+
+npm script permite agrgar comandos con script hay unos automaticos que se ejecuten cada vez que pase algo
+
+bundle = resumen o compilado tambien llamado build
+
+con npm run --comando definido en scripts
+npm run build
+
+node por defecto reconoce el comando start como un node server.js que es lo que utilizamos para levantar el servidor 
+para que esto suceda el server debe tener el nombre server.js
+npm start
+en caso de que se necesite agregar propiedades al levantar el servidor si es necesario renombrarlo en los scripts
+
+vamoas a poner un watch que permita identificar cuando en determinados archivos se hayan hecho cambios y que se 
+ejecuten las cosas que se necesitan, para esto instalamos la libreria watchify
+npm i --save-dev watchify
+
+se crea una funcion que permite compilar el codigo la cual recibe un parametro que es watch que basicamnte es un
+ boolean que me permite identificar si ha ocurrido un cambio
+ la variable bundle contiene lo que le da browserify 
+ 
+  para ejecutar una tarea definida en gulp solo debemos ejecutar gulp y nombre de la tarea
+  gulp watch
+  
+al ejecutar el  watch se queda escuchando por cambios
+
+por ultimo se reescribe el comando start para que al ejecutarlo no solamente inicie el servidor si no que ademas deje escuchando 
+el watch
+
+para ejecutar varios comandos en una sola linea en linux y cmd se utiliza & pero en powershell se utiliza ;
+
+en windows no funciono los scripts con comandos dobles. "start": "gulp watch & node server.js"
