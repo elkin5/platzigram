@@ -1,0 +1,22 @@
+se utiliza la libreria yo-yo que es un ppoco de la misma filosofia de react que te permite y facilita crear
+templates y agregarlos como objetos del dom e insertarlos dentro de la pagina y actualizarla si existen cambios
+se puede utilizar en defecto de react teniendo en cuenta que pesa 6 veces menos
+npm i --save yo-yo
+
+esta libreria l;a vamos a incluir dentro de lo que se le envia al cliente porque las vistas estan del lado del cliente
+javascript crecion un monton gracias a que se pueden hacer muchas cosas del lado del cliente y por tanto crear 
+aplicaciones ricas del lado del cliente 
+
+home = /
+
+los input no es necesario ponerle etiqueta de cierre y esto puede generar problemas se debe cerrar solamente con />
+
+con yo`html que quiero que sea objeto` con esto ya tengo un objeto de html de lo que quiero
+Error: multiple root elements must be wrapped in an enclosing tag
+dentro del objeto yo no soporta los comentarios normales  <!-- Boton con efecto de gota de materialize --> 
+
+para que limpie todo lo que hay en la pagina y cargue el nuevo formulario de manera limpia, si dejar rastro de la anterior 
+pagina por el childappend se utiliza una libreria que me permite limpiar el main para luego agregar el nuevo elemento
+npm i --save empty-element
+
+Con esto podemos incertar paginas o elementos muy simplemente 
