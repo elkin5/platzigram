@@ -1,0 +1,16 @@
+Una manera para que siga una esrtructura mas formal y que cada modulo se encargue de una tarea
+
+el index js es el archivo por defecto que se requiere cuando hacemos un require
+
+si requerimos en varios archivos una libreria la referencia va ha ser siempre al mismo modulo de eso se encarga browserify
+por tanto lo cargamos una vez y esta disponible para utilizarlo en diferentes archivos y tendra la misma referencia a ese modulo
+
+modulo es una variable que esta disponible en javascript que permite organizar el codigo en modulos o archivos que tienen 
+diferentes responsabilidades
+
+nos sirve para devolver el elemeto creado en yo y utilizarlo en otra parte mediate un require
+
+se realiza un require de los modulos creados osea homepage y signup desde el index de  la carpeta src con esto manejamos los
+objetos con page, se ordenan de mayor  a menor por las rutas / , /a, /a/b y en este se inicializa page
+
+con page se opera siempre sobre el mismo objeto
