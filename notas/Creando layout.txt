@@ -1,0 +1,20 @@
+para hacer solo un refresh de la parte derecha de la pagina creamos el modulo o carpeta landing
+con esta y lo que vamos a tener es un diseno con el celular a la dercha y se dejara un espacio 
+para que se refresque con el signup o el signin segun sea necesario.
+
+con los template string tenemos los ${} que permiten poner contenido dentro variables 
+para esto ponemos a landing una funcion.
+las funciones en javascript pueden ser annimas pero de ocurrir una error sera mas dificil
+encontrar donde ocurrio.
+
+cuando vamos a un modulo o carpeta si necesitamos llamar la principal y se encuentra con el nombre 
+index.js entonces no es necesario poner el index.js en el llamdo o require
+
+Cuando no se expporta nada lo que hace al llamar el modulo es ejecutar el codigo que haya.
+
+activar el checkeo de errore
+Es posible activar que muestre cuando existe un error al creaar el bundle asi que se puede activar.
+
+on se utiliza para escuchar un evento y ejecuta la funcion o callback que se le pase 
+
+un callback es una funcion que puede o no ejecutarse en un futuro.
