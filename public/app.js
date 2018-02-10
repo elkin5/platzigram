@@ -2534,6 +2534,148 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],15:[function(require,module,exports){
+// Utilities
+const lowerCase = require('./lower-case')
+const specials = require('./specials')
+
+const regex = /(?:(?:((?:^|[.!?;:"-])\s*)(\w))|(\w))(\w*[’']*\w*)/g
+
+const convertToRegExp = specials => specials.map(s => [new RegExp(`\\b${s}\\b`, 'gi'), s])
+
+module.exports = (str, options = {}) => {
+  str = str.toLowerCase().replace(regex, (m, lead = '', forced, lower, rest) => {
+    if (!forced) {
+      const fullLower = lower + rest
+
+      if (lowerCase.has(fullLower)) {
+        return m
+      }
+    }
+
+    return lead + (lower || forced).toUpperCase() + rest
+  })
+
+  const customSpecials = options.special || []
+  const replace = [...specials, ...customSpecials]
+  const replaceRegExp = convertToRegExp(replace)
+
+  replaceRegExp.forEach(([pattern, s]) => {
+    str = str.replace(pattern, s)
+  })
+
+  return str
+}
+
+},{"./lower-case":16,"./specials":17}],16:[function(require,module,exports){
+const conjunctions = [
+  'for',
+  'and',
+  'nor',
+  'but',
+  'or',
+  'yet',
+  'so'
+]
+
+const articles = [
+  'a',
+  'an',
+  'the'
+]
+
+const prepositions = [
+  'aboard',
+  'about',
+  'above',
+  'across',
+  'after',
+  'against',
+  'along',
+  'amid',
+  'among',
+  'anti',
+  'around',
+  'as',
+  'at',
+  'before',
+  'behind',
+  'below',
+  'beneath',
+  'beside',
+  'besides',
+  'between',
+  'beyond',
+  'but',
+  'by',
+  'concerning',
+  'considering',
+  'despite',
+  'down',
+  'during',
+  'except',
+  'excepting',
+  'excluding',
+  'following',
+  'for',
+  'from',
+  'in',
+  'inside',
+  'into',
+  'like',
+  'minus',
+  'near',
+  'of',
+  'off',
+  'on',
+  'onto',
+  'opposite',
+  'over',
+  'past',
+  'per',
+  'plus',
+  'regarding',
+  'round',
+  'save',
+  'since',
+  'than',
+  'through',
+  'to',
+  'toward',
+  'towards',
+  'under',
+  'underneath',
+  'unlike',
+  'until',
+  'up',
+  'upon',
+  'versus',
+  'via',
+  'with',
+  'within',
+  'without'
+]
+
+module.exports = new Set([
+  ...conjunctions,
+  ...articles,
+  ...prepositions
+])
+
+},{}],17:[function(require,module,exports){
+const intended = [
+  'ZEIT',
+  'ZEIT Inc.',
+  'CLI',
+  'API',
+  'Next.js',
+  'Node.js',
+  'HTTP',
+  'HTTPS'
+]
+
+module.exports = intended
+
+},{}],18:[function(require,module,exports){
 var bel = require('bel') // turns template tag into DOM elements
 var morphdom = require('morphdom') // efficiently diffs + morphs two DOM elements
 var defaultEvents = require('./update-events.js') // default events to be copied when dom elements update
@@ -2577,7 +2719,7 @@ module.exports.update = function (fromNode, toNode, opts) {
   }
 }
 
-},{"./update-events.js":16,"bel":1,"morphdom":9}],16:[function(require,module,exports){
+},{"./update-events.js":19,"bel":1,"morphdom":9}],19:[function(require,module,exports){
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -2615,7 +2757,7 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}],17:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 var page = require('page');
 
 page('/', function (ctx, next) {
@@ -2623,7 +2765,7 @@ page('/', function (ctx, next) {
   main.innerHTML = 'Home <a href="/Signup">Signup</a> Home <a href="/Signin">Signin</a>';
 });
 
-},{"page":12}],18:[function(require,module,exports){
+},{"page":12}],21:[function(require,module,exports){
 var page = require('page');
 
 require('./homepage');
@@ -2632,7 +2774,7 @@ require('./signin');
 
 page.start();
 
-},{"./homepage":17,"./signin":20,"./signup":22,"page":12}],19:[function(require,module,exports){
+},{"./homepage":20,"./signin":23,"./signup":25,"page":12}],22:[function(require,module,exports){
 var yo = require('yo-yo');
 
 module.exports = function landing(box) {
@@ -2650,17 +2792,19 @@ module.exports = function landing(box) {
     </div>`;
 };
 
-},{"yo-yo":15}],20:[function(require,module,exports){
+},{"yo-yo":18}],23:[function(require,module,exports){
 var page = require('page');
 var empty = require('empty-element');
 var template = require('./template');
+var title = require('title');
 
 page('/signin', function (ctx, next) {
+  title('Platzigram-Signin');
   var main = document.getElementById('main-container');
   empty(main).appendChild(template);
 });
 
-},{"./template":21,"empty-element":3,"page":12}],21:[function(require,module,exports){
+},{"./template":24,"empty-element":3,"page":12,"title":15}],24:[function(require,module,exports){
 var yo = require('yo-yo');
 var landing = require('../landing');
 
@@ -2692,17 +2836,19 @@ var signinForm = yo`<div class="col s12 m7">
 
 module.exports = landing(signinForm);
 
-},{"../landing":19,"yo-yo":15}],22:[function(require,module,exports){
+},{"../landing":22,"yo-yo":18}],25:[function(require,module,exports){
 var page = require('page');
 var empty = require('empty-element');
 var template = require('./template');
+var title = require('title');
 
 page('/signup', function (ctx, next) {
+  title('Platzigram-Signup');
   var main = document.getElementById('main-container');
   empty(main).appendChild(template);
 });
 
-},{"./template":23,"empty-element":3,"page":12}],23:[function(require,module,exports){
+},{"./template":26,"empty-element":3,"page":12,"title":15}],26:[function(require,module,exports){
 var yo = require('yo-yo');
 var landing = require('../landing');
 
@@ -2737,4 +2883,4 @@ var signupForm = yo`<div class="col s12 m7">
 
 module.exports = landing(signupForm);
 
-},{"../landing":19,"yo-yo":15}]},{},[18]);
+},{"../landing":22,"yo-yo":18}]},{},[21]);
