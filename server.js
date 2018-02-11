@@ -11,15 +11,15 @@ app.use(express.static('public'));
 
 //cuando se acceda a dicha ruta se ejecute esa funcion
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram' });
 })
 
 app.get('/signup', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram-Signup' });
 })
 
 app.get('/signin', function (req, res) {
-  res.render('index');
+  res.render('index', { title: 'Platzigram-Signin' });
 })
 
 //Se pone el puerto donde se ejecuta y es posible tambien la url, y la funcion en la cual se va a ejecutar si no se ejecuta bien

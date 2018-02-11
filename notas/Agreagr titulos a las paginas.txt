@@ -1,0 +1,6 @@
+Los objetos en javascript son con { clave: valor}
+pasando un objeto de estos al hacer el render es posible cambiar el titulo
+Toca conseguir un modulo que permita renderizar el titulo dentro de una misma pagina porque
+el modulo title no funciono.
+
+cuando hay cambios en el server el watch no se realiza por lo tanto se debe de reinicir el server.
