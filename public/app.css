@@ -6916,7 +6916,7 @@ body {
   color: #125668;
   font-family: 'Montserrat'; }
 
-#main-container {
+.landing {
   margin: 30px auto; }
 
 .celular {
@@ -6933,9 +6933,10 @@ body {
   padding: 10px 0;
   text-align: center; }
 
-.signup-box .platzigram {
-  font-family: 'Oleo Script';
-  font-size: 42px; }
+.platzigram {
+  font-family: 'Oleo Script' !important;
+  font-size: 42px;
+  color: #125668 !important; }
 
 .signup-form {
   width: 60%;
@@ -6954,3 +6955,12 @@ body {
 
 .signup-form .btn.btn-signup, .signup-form .btn-signup.btn-large {
   background-color: #125668; }
+
+.header {
+  background-color: white;
+  color: #125668;
+  box-shadow: none;
+  border-bottom: 1px solid #edeeee; }
+
+.timeline {
+  padding: 30px 0; }

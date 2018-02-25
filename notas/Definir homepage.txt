@@ -1,0 +1,38 @@
+en materialize 
+s12 en pequenos ocupe todo 
+m6 en medianos ocupe pla mitad 
+offset-m1 no tenga nada en el primero offset deja una columna vacia push la corre
+
+cuando este medio lo voy a tirar todo hacia la derecha push-m10
+
+para los dropdown se coloca un atributo mas que es data-activates
+ademas siempre tiene un ul 
+
+en emmet 
+se utiliza . para class # para id {} para lo que va dentro > para nuevo elemento $ para numero cualquiera
++ se utiliza para poner al mismo nivel
+btn-flat para que se ve sin color de fondo
+
+fontawesome contiene un monton de iconos que podemos usar
+https://fontawesome.com/get-started/web-fonts-with-css
+
+para usarlo necesitamos copiar el link, en mi modo de pensar es un poco mas facil usar bajando los
+iconos porque pueden cambiar y quedar sin iconos.
+
+cambio la clase platzigram del css para que no solamente tenga la misma tipografia
+no solo en la caja si no en todo el proyecto index.scss
+
+Se utiliza !important para que no se pise ningun css
+
+toca hacerle gulp para los archivos css porque el gulp watch no los toma
+
+le agregue los iconos y la imagen responsive
+
+Se va a tirar un poco mas para arriba
+
+yo-yo no puede tener 2 elementos ejemplo <div ...> </div> <nav ...> </nav>
+por lo tnto debe quedar como un solo elemnto <div ..>  <div ...> </div> <nav ...> </nav></div>
+
+padding espaciado
+
+Se desea que el header y el footer esten en todas las paginas para esto qse crea un layout
