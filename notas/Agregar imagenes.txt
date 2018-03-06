@@ -1,0 +1,28 @@
+Para esto se utiliza una card de materialize que permite mostrar las imagenes con una descripcion
+
+para ejecutar el debug desde vscode se debe utilizar el launch.json por los que aparece un error en el package json 
+que se soluciona con " $schema ": "http://json.schemastore.org/coffeelint" ,
+
+
+todos los arrays tienen la funcion map que sirve para iterarlo, donde por cada uno de ellos va a ejecutar algo
+recibiendo como parametro la funcion que se va ejecutar por cada uno de los elementos
+
+un map se diferenwcia de un foreach en que la funcion map devuelve un array osea no pisa a la variable pero si 
+devuelve otro array, el forech solo nos permite ejecutar funciones sobre el valor
+
+toca ponerle el return porque si no vamos a tene el mismo array
+
+el layout va a ser el header y dentro va el content 
+
+la etiqueta span en html es una etiqueta neutra que sirve ppara agragar estilos al texto
+
+para crear un comentario pongo {pi} y enter
+
+border radius se utiliza para que se vea todo redondeado
+float para que aparezca a la izquierda
+y el margin para que se separe
+line-height tamano a lo alto
+width largo
+height alto
+Si necesito algo junto lo puedo juntar con un <p>
+

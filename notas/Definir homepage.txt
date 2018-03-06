@@ -36,3 +36,9 @@ por lo tnto debe quedar como un solo elemnto <div ..>  <div ...> </div> <nav ...
 padding espaciado
 
 Se desea que el header y el footer esten en todas las paginas para esto qse crea un layout
+
+https://spacetelescope.github.io/understanding-json-schema/structuring.html
+
+con gulp styles solo corre los estilos
+
+https://github.com/Microsoft/vscode/issues/8757
