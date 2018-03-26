@@ -1,0 +1,23 @@
+Lo que se utiliza para esto es la actualizacion de la vista, para esto utilizamos yo-yo
+mediante la funcionalidad dinamic updates haciendo uso de yo.update donde se le pasa cual es 
+el elemento viejo y cual el nuevo por el que se debe reemplazar
+para ello tenemos que guardar una referencia al elemento viejo y crear
+el nuevo elemento
+
+A la funcion del onclick en el <a> se le hace un return para que no continue con la ejecucion del href
+
+con ctrl+D puedo buscar todas las selecciones y modificarla
+
+saas permite poner un elemento dentro de otro de tal manera que cuando uno contenga al otro se
+expresaran las caracteristicas del contenido
+
+expresion regular
+liked ? 1 : -1; -- condicion ? accionTrue : accionFalse
+
+cuando necesito llamar a una funcion pasandole un parametro al html de yo-yo
+
+propiedad bind que tienen todad las funciones y que sirve para cambiar el this(contexto)
+bind lo que hace es devolvernos otra funcion bindiada o bound a otro objeto como no nos 
+interesa cual es ese otro objeto entonces simplemente pasamos null
+=> funcion.bind(null, parametroFuncion)
+permite evitar que un llamado se convierta en un ciclo infinito

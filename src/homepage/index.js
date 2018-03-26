@@ -11,7 +11,7 @@ page('/', function (ctx, next) {
               'avatar': 'perfil2.jpg'},
       'url': 'office.jpg',
       'likes': 2,
-      'liked': true
+      'liked': false
     },
 
     {
@@ -21,7 +21,7 @@ page('/', function (ctx, next) {
       },
       'url': 'flor.jpg',
       'likes': 10 ,
-      'liked': false
+      'liked': true
     }
   ]
   empty(main).appendChild(template(pictures));

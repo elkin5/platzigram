@@ -6975,6 +6975,9 @@ body {
 .card small.time {
   line-height: 48px; }
 
+.card .username {
+  color: #125668; }
+
 .card p {
   padding: 20px 0; }
 
@@ -6985,8 +6988,15 @@ body {
 .card i {
   font-size: 30px; }
 
-.card .fa-heart {
+.card .far {
   color: #125668; }
 
-.card .username {
-  color: #125668; }
+.card .fas {
+  color: #f44336;
+  display: none; }
+
+.card.liked .fas {
+  display: block; }
+
+.card.liked .far {
+  display: none; }
