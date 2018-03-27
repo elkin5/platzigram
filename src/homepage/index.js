@@ -11,7 +11,8 @@ page('/', function (ctx, next) {
               'avatar': 'perfil2.jpg'},
       'url': 'office.jpg',
       'likes': 2,
-      'liked': false
+      'liked': false,
+      'dateCreated': new Date()
     },
 
     {
@@ -21,7 +22,8 @@ page('/', function (ctx, next) {
       },
       'url': 'flor.jpg',
       'likes': 10 ,
-      'liked': true
+      'liked': true,
+      'dateCreated': new Date().setDate(new Date().getDate() - 10)
     }
   ]
   empty(main).appendChild(template(pictures));

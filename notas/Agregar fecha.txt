@@ -1,0 +1,20 @@
+Se jdesea agregar una fecha en el formato 'hace un dia' 'hace 20 minutos' etc fecha raltiva
+para ello se utiliza la libreria moment.js
+
+mediante la funcion fromNow retorna la fecha relativa
+moment(picture.dateCreated).fromNow()
+
+para la fecha utilizo new Date()
+
+para setear un valor a la fecha utilizo
+new Date().setDate()
+
+para sacar la fecha de calendario de dia de hoy se puede utilizar
+new Date().getDay()
+
+tambien se puede sumar o restar
+(new Date().getDay() - 10)
+
+para traduccion se usa i18n 
+cuando utilizas browserify puedes requerir el archivos locale que nosotros necesitamos
+y pasarlo a moment
