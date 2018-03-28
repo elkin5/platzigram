@@ -1,0 +1,27 @@
+Con la libreria format.js es posible no solamente cambiar el idioma de todo el texto de nuestra aplicacion
+viene activa en todos los browser y en donde no viene activa se mirara como hacer.
+
+es muy buena porque se ajusta a otras librerias de creacion de vistas como react, ember, dust
+ademas si no se esta utilizando ninguna de la librerias se puede usar con standalone para cualquier js
+ se tienen diferentes librerias para hacer parseo para, formatear mensajes y lo que nos interesa es relativeformat
+ 
+ los polyfills: son lo que se incluye en el proyecto para los casos que el navegador no conoce, 
+ identificar cada una de las caracteristicas que no se soportan y se agregan con un polyfill
+ 
+ relativeformat permite formatear fechas para mostrar en formato relativo
+ 
+ la diferencia entre format js y moment es que format es mucho mas soportada
+ 
+ el objeto intlrelative form debe crearse a partir del objeto global osea window, el objeto global
+ si un objeto no esta definido va a buscralo al objeto global por tanto debe estar definido dentro del objeto global
+ 
+ salia un error porque no se habia declarado pero era porque estaba diferente la creacion y la declaracion
+ 
+ esto se utiliza para safari
+ para el polyfill se instala intl
+ luego se valida si el objeto esta declarado
+ if (!window.intl) verifico si es null o undefined
+ y creo el require de intl
+ var window.intl = require ('intl')
+ y ademas se crea el local 
+ require('intl/locale-data/jsonp/en-US')
