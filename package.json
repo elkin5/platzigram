@@ -23,6 +23,7 @@
     "empty-element": "^1.0.0",
     "express": "^4.16.2",
     "intl": "^1.2.5",
+    "intl-messageformat": "^2.2.0",
     "intl-relativeformat": "^2.1.0",
     "materialize-css": "^0.100.2",
     "moment": "^2.21.0",
@@ -42,6 +43,7 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "start": "concurrently \"gulp styles\" \"node server.js\" \"gulp watch\""
+    "start": "concurrently \"node server.js\" \"gulp watch\"",
+    "buildStyles": "concurrently \"gulp styles\""
   }
 }

@@ -1,0 +1,8 @@
+Para esto utilizamos el format js
+
+voy a la forma donde dice como utilizarlo cuando no se estan utilizando ninguna forma de componrntes
+react, ember etc
+
+vamos a intl message format 
+con esto podemos decirle que formato utilice si punto o coma o que texto se debe colocar de acuerdo a si es 
+0, 1 o un numero distinto 

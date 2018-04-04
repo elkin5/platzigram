@@ -10,7 +10,7 @@ page('/', function (ctx, next) {
       'user': {'username': 'mesa',
               'avatar': 'perfil2.jpg'},
       'url': 'office.jpg',
-      'likes': 2,
+      'likes': 0,
       'liked': false,
       'dateCreated': new Date()
     },
@@ -21,7 +21,7 @@ page('/', function (ctx, next) {
         'avatar': 'perfil1.jpg'
       },
       'url': 'flor.jpg',
-      'likes': 10 ,
+      'likes': 1 ,
       'liked': true,
       'dateCreated': new Date().setDate(new Date().getDate() - 10)
     }
