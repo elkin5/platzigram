@@ -6,3 +6,22 @@ react, ember etc
 vamos a intl message format 
 con esto podemos decirle que formato utilice si punto o coma o que texto se debe colocar de acuerdo a si es 
 0, 1 o un numero distinto 
+
+vamos a ver como se debe ver de acuerdo al idioma y traducir todos los textos que aparezcan en la app
+
+Se crea dentro de nuestro proyecto un modulo que sea el encargado de traducir
+
+para las traducciones se utiliza la creacion de unos modulos que contiene un objeto con la traduccion
+https://github.com/yahoo/intl-messageformat
+
+para esto se crean unos messages que contendra todas las posibles traducciones que se le daran al mensaje
+
+de declara el objeto MESSAGES ={}
+  y se le pueden crear propiedades MESSAGE.es
+  y se queremos poner espacios entre propiedad se utiliza ['en-US']  === MESSAGE.en-US
+  
+ para crear el mensaje se usa var msg = new IntlMessageFormat(param1, 'en-US', format)
+ donde param1 es el mensaje y el parametro 2 es el locale , podemos pasarlo con el locale 
+ 
+ con estas propiedades podemos agregarle el signo $ o poner punto o coma segun sea --- ver ejemplos en doc
+safari no soporta el poner los parametros opcionales opts = {} 
