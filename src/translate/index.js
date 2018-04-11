@@ -20,10 +20,10 @@ var MESSAGES = {}; // declaracion de un objeto vacio
 MESSAGES.es = es; // asignacion de una propiedad al objeto
 MESSAGES['en-US'] = en; // asignacion de una propiedad que contiene espacios o caracteres especiales
 
-var locale = 'en-US';
+var locale = localStorage.locale || 'es';
 
 module.exports = {
-  message: function (text, opts = {}) {
+  message: function (text, opts) {
     opts = opts || {}; // a opts le asignamos lo que venga o un objeto vacio. 
     var msg = new IntlMessageFormat(MESSAGES[locale][text], locale, null);
     return msg.format(opts);

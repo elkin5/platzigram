@@ -1,0 +1,25 @@
+Se van a traducior todos los textos.
+
+lo primero que se debe hacer es poner todos los textos en el modo clave: valor en el archivo de idioma
+
+en el .pug del cliente no podemos hacer el require del translate por lo que necesitamos
+crear un nuevo modulo donde llevarlo
+
+luego lo agregamos al documento con 
+
+document.body.appendChild(el)
+
+y por ultimo se agrega a nuestra pagina 	INDEX.JS PRINCIPAL
+
+para poner una variable en la cual se selecciona el idioma vamos a guardar el el 
+localstorage se utiliza para almacenar valores en el navegador que permanecen en el tiempo
+
+se utiliza location.reload() para recargar la pagina
+
+si se llama de manera normal ${lang('es')} entonces cuando llegue a esa linea va a evaluar 
+la funcion por mas que no se haya hecho click entonces le vamos a decir que llame a la funcion pero pasandole 
+un parametro, que la llame nada mas cuando hagamos click
+para eso se usa bind de la manera siguiente ${lang.bind(null, 'es')}
+mediante esto se pasa la refencia a esa funcion con el parametro mas no se hace un llamado 
+
+y por ultimo se usa return false para que no pase al href del link
