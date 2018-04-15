@@ -11,8 +11,8 @@ var el = yo`
         </a>
         <!-- Dropdown Structure-->
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#" onClick=${lang.bind(null, 'es')}>${translate.message('spanish')}</a></li>
-          <li><a href="#" onClick=${lang.bind(null, 'en-US')}>${translate.message('english')}</a></li>
+          <li><a href="#" onclick=${lang.bind(null, 'es')}>${translate.message('spanish')}</a></li>
+          <li><a href="#" onclick=${lang.bind(null, 'en-US')}>${translate.message('english')}</a></li>
         </ul>
       </div>
       <div class="col s12 l3 push-l6 center-align">2017 © Platzigram</div>
