@@ -1,0 +1,12 @@
+Para poder instalar comandos con -g en npm debo hacerlo con sudo 
+
+para correr plazigram necesito instalar de manera global:
+gulp
+concurrently
+
+sudo npm i -g gulp
+
+cuando se cambia de windows a ubuntu o viceversa puede que algunos modulos
+no funcionen de la manera correcta como es el caso de sass por lo que es necesario 
+recompilar
+npm rebuild node-sass --force
