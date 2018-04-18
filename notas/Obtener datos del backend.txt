@@ -1,0 +1,109 @@
+obtener los datos que vendran de una BD 
+y ponerlos como objetos en el backend y los entregara a la app
+
+en el server.js se pone una ruta que sera nuetstra api(interfaz con el resto del mundo)
+y esta api la consume nuestra misma app
+
+creamos una nueva ruta que en server js que se encuentra en api pictures junto a la 
+funcion que recibe un req y un res cada una de estas funciones que estan en page se van a
+denominar midleware en esta funcion vamos a copiar las pictures y vamos a hacer de cuenta 
+que las extraemos de la BD
+
+con un res.send se toma lo que esta en el en pictures y express entiende que es un 
+array de objet
+
+Si accedieramos a una bd se demoraria un poco, por tanto vamos a utilizar settimeout
+es una funcion del scope global y recibe un collback y un tiempo que queremos que tarde
+y despues ejecute
+
+
+ahora vamos a ver como funciona page del lado cliente que es un poco similar a como funciona en
+el servidor 
+
+page como segundo parametro lo que recibe es una grupo de funciones que se van encadenando
+y por medio de un parametro next entonces tenemos una cadena de funciones
+o midlewares que se van llamando consecutivamente, si por alguna razon sucede algun error
+o por logica no debe seguir podemos hacer llamado a vistas o hacemos la logica que queramos.
+
+la sintaxis eberia ser:
+page('/', function loadpictures(ctx, next) {
+
+}, function (ctx, next) {
+
+})
+
+la ultima funcion siempre puede ser una funciona anonima,
+pero para afectos de organizacion entonces tenemos 
+
+page('/', loadpictures, function (ctx, next) {
+
+});
+
+function loadpictures(ctx, next){};
+
+para efectos practicos la ultima funcion puede ser anonima pero las anteriores si es necesario
+drles un nombre.
+
+
+Hay que recordar que las funciones del server en page 
+reciben function xxx(req, res, [next]) para nuestro caso se esta obviando next
+que solo es necesario cuando se necesita que haga una aaccion de mas 
+por ejemplo si deseamos que el usuario solo pueda acceder a la home si se encuentra logueado
+
+ existen diferentes maneras de hacer request, por ejemplo ajax con $.get o $.ajax enviando la ruta (/api/pictures) pero tambien existen otras librerias
+
+una de ellas es superagent que hace los llamados atravez de ajax pero tiene todo de una 
+manera mas ordenada y amigable 
+
+prettier para formatear codigo al guardar editor.formatOnSave 
+// Set the default
+"editor.formatOnSave": false,
+// Enable per-language
+"[javascript]": {
+    "editor.formatOnSave": true
+}
+
+para utilizar beatifier "files.associations": {
+        "*.js": "es-beautifier"
+    },
+
+
+para recoger los datos desde el servidor vamos a utilizar ctx context que lo que hace es ir
+recogiendo datos de todos los llamados desde el cleinte.
+
+para que el sguiente midleware pueda obtener esos datos y operar sobre ellos.
+su objetivo principal es compartir los datos a traves de los midlewares
+
+ahora que se demora unos segundos para cargar las pictures pero el prooblema es que solo muetra el footer asi que se va aponer de tal manera que tambien ponga el header y espere los 2 segundos
+
+para esto lo que hay que hacer es independizarlo por eso lo quitamos del layout
+y lo ponemos en un modulo aparte
+
+
+NOTA: cuando usamos yo-yo no se puede tener 2 div como eleento raiz por lo tanto 
+si esto sucede debo agruparlos en uno solo con otro div
+
+para independizar debo crear modulo -> carpeta e index.js
+-> agregar el section en el .pug donde se va a colocar 
+-> poner el elemnto en el index con yo-yo y agregarlo al documento
+-> llamarlo desde el index ppal mediante el require de gulp
+al ponerlo en el index ppal se va a mostrar en todas las pantallas por lo que necesito
+llevarlo solo a la homepage
+
+con empty lo que hago es borrar lo anterior y ponerlo de nuevo
+
+Midleware = function (ctx, next){}
+
+con un middleware lo ponemos esn la homepage y donde pensamos que debe ir
+
+
+
+
+
+
+
+
+
+
+
+

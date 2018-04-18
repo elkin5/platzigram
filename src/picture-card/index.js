@@ -5,7 +5,7 @@ var translate = require('../translate')
 module.exports = function pictureCard(pic) {
 
   var elementOld;
-  
+
   function render(picture) {
     return yo`   
     <div class="card ${picture.liked ? 'liked' : ''}">
@@ -19,16 +19,16 @@ module.exports = function pictureCard(pic) {
             ${picture.user.username}
           </span>
         </a>
-        <small class="right time">${translate.date.format(picture.dateCreated)}</small>
+        <small class="right time">${translate.date.format(new Date(picture.dateCreated))}</small>
         <p>
           <a class="left" href="#" onclick=${like.bind(null, true)}><i class="far fa-heart"></i></a>
           <a class="left" href="#" onclick=${like.bind(null, false)}><i class="fas fa-heart"></i></a>
-          <span class="left likes">${translate.message('likes', {'likes': picture.likes})}</span>
+          <span class="left likes">${translate.message('likes', { 'likes': picture.likes })}</span>
         </p>
       </div>
     </div>`
   }
-  
+
   function like(liked) {
     pic.liked = liked;
     pic.likes += liked ? 1 : -1;
