@@ -1,0 +1,20 @@
+la libreria axios permite hacer llamados http mediante promesas
+las promesas son otra forma de ejecutar codigo asicrono
+
+las proesas se crearon para solucio el callback hell 
+o crecimiento del codigo hacia la derecha
+
+la diferencia con las promesas es que podemos encademar los .then osea podemos dentro
+del .then realizar  un return de una nueva promesa, esa promesa se ejecutara y nos llegara 
+al suiguiente .then y de esta manera podemos encadenar nuestro codigo de arriba hacia abajo
+
+ej 
+axios.get('/user?id=123').then( function (response) 
+{
+	return otra_promise
+}).catch...
+
+
+con el retur va al siguiente .then y puedo poner el catch para las encadenadas.
+
+las promesas pueden estar en uno de tres estados posibles. pending, fullfill o result, reject
