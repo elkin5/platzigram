@@ -6,7 +6,7 @@ var headerMiddleware = require('../header');
 var requestAxios = require('axios');
 
 // funcion que va a agregar las pictures al dom
-page("/", headerMiddleware, loadPicturesAxios, function (ctx, next) {
+page("/", headerMiddleware, loadPicturesFetch, function (ctx, next) {
   var main = document.getElementById("main-container");
 
   empty(main).appendChild(template(ctx.pictures));
@@ -38,6 +38,22 @@ function loadPicturesAxios(ctx, next) {
       next();
     })
     .catch((err) => {
+      console.log(err);
+    });
+}
+
+//OPCION 3
+function loadPicturesFetch(ctx, next) {
+
+  fetch("/api/pictures")
+    .then(res => {
+      return res.json();
+    })
+    .then(pictures => {
+      ctx.pictures = pictures;
+      next();
+    })
+    .catch(err => {
       console.log(err);
     });
 }

@@ -1,0 +1,9 @@
+Fetch es una libreria pata llamados http con una ventja sobre las demas y es que 
+es soportada por defecto en los navegadores, si hay un navegador que no la soporte existe un polifill para loggrar hacerlo
+
+la respuesta es un poco distinta a los demas porque esa respuesta es una nueva 
+promesa por lo que necesitamos un return que convierte la respuesta en un json
+y luego si se recoje el valor encadenando un .then
+
+la respuesta de lo que euremos nos la da la segunda promesa cuando se resuelva
+
