@@ -1,0 +1,32 @@
+Este es un estandar de ecmascript que permite el tratamiento del request de manera
+que pueda estar verificado por un try catch
+ ya que normalmente si hay un error no podra verse reflejado de una aen el catch
+como deberia ser por eso esta especificacion ayuda con una parte de sintaxis que
+nos permta hacer eso.
+
+haciendo uso del fetch obteneos las pictures, para ello se hace uso de la palabra await
+que deytener la ejecucion para que se resuelva la promesa
+permite que cuando se cumpla la promesa se asigne su valor
+
+para todo esto necesitamos de las librerias:
+npm i --save-dev babel-plugin-syntax-async-functions
+npm i --save-dev babel-plugin-transform-regenerator
+npm install babel-preset-env --save-dev
+
+
+ahora debe decirsele a babel y browserify que incluya estos preset y los plugin 
+esto dentro del gulpfile
+
+NOTA : una funcion que tiene una sola linea no necesita {} y si es un return no necesita la
+palabra return  ; se activa para que muestre los errores de browserify
+
+para arreglar el bug de que se qqueda esperando cuando ejecuto el comando gulp
+esto sucede porque estoy llamando wachify en el bundle
+entonces debemos ponerle el llamado a wachify cuando se haga watch 
+
+El error regeneratorRuntime ocurre porque no se tiene en ningun lugar el generator
+incluido asi que se debe incluir con el babel polyfill
+
+para esto se debe instalar 
+npm i --save-dev babel-polyfill
+e incluirlo en nuestro proyecto en el index ppal
