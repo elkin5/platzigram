@@ -1,0 +1,7 @@
+Por ultimo vamos a poner un boton y a darle la funcionalidad para upload la picture
+
+sera ubicado en el timeline
+
+toca poner el boton dentro del formulario porque permite procesar el archivo 
+adicionando la propiedad enctype que permite procesar los archivos con el 
+atributo multipart/form-data
