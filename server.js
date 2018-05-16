@@ -1,6 +1,18 @@
 // SIRVE PARA CREAR SERVER Y LEVANTAR
-
 var express = require("express");
+// para subir una picture
+var multer = require('multer');
+var ext = require('file-extension');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, +Date.now() + '.' + ext(file.originalname));
+  }
+});
+var upload = multer({ storage: storage }).single('picture');
+
 var app = express();
 
 //Se le dice a la libreria express que procese las vistas con pug
@@ -59,7 +71,18 @@ app.get("/api/pictures", function (req, res) {
     res.send(pictures);
   }, 2000);
 });
-//Se pone el puerto donde se ejecuta y es posible tambien la url, y la funcion en la cual se va a ejecutar si no se ejecuta bien
+
+// middleware para subir la picture
+app.post('/api/pictures', function (req, res) {
+  upload(req, res, function (err) {
+    if (err) {
+      return res.send(500, "error uploading file");
+    }
+    res.send("File uploaded");
+  })
+});
+//Se pone el puerto donde se ejecuta y es posible tambien la url, y la funcion en la cual se va a ejecutar 
+// si no se ejecuta bien
 app.listen(3000, function (err) {
   if (err) return console.log("Hubo un error"), process.exit(1);
 

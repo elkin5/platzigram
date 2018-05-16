@@ -1,0 +1,18 @@
+Todos los on reciben como parámetro un event
+
+ev.preventDefault(); // detiene el llamado automático de el action y la ejecución
+
+con arguments puedo pasar en un array todo lo que he recibido
+
+para poder subir la foto al server vamos a hacer uso de la libreria multer 
+que es un midleware para tratar multipart/form-data 
+
+los storage son las distintas formas de almacenar la informacion
+utilizo la parte de storage disk porque queremos poner datos en disco
+este storage se debe definir antes de upload por lo tanto se copia desde npm
+
+cambiamos los datos de la carpeta donde se descargan las cosas, y tenemos el nombre
+del archivo y la fecha, nos falta la extension para esto se utiliza un modulo npm
+
+el evento this dentro del onsubmit contiene la data del formulario que lo dispara
+
