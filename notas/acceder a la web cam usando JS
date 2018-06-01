@@ -1,0 +1,35 @@
+para esto vamos a utilizar una libreria 
+no todos los navegadores soportan acceso a hardwre entonces una funcionalidad para su soporte
+
+en el template de la homepage se agraga un nuevo boton y un elemento modal
+
+dentro del index del homepage se usa la libreria webcam y se pone la funcionalidad
+que cuando se presione el boton se pueda obtener el modal
+
+para esto se pone dentro del boton del cual se va a llmar un modal-trigger en la clase
+del boton desde donde se va a hacer el llamado al modal
+
+debe tratar de no abusar del jquery porque hace muy pessado el sitio y siempre es 
+mas conveniente buscar algunas librerias que ejecuten las funciones requeridas
+
+en el link le ponemos el href del modal que se quiere que muestre
+con una almoadilla (#) y el id que queremos que muestre
+
+para que inicie el modal es necesario poner $(document).ready(function () {
+    $('.modal').modal();
+  }
+  );
+
+ahora para que inicie la camara es necesario ponerla en un div que este dimesionado previamente
+
+la expresion $(document).ready(function(){}) se utiliza para que una vez este cargado el dom se 
+ejecute lo que se colaca en el callback' aunque debe usarse en la version mas reciente
+que es: $(function(){
+  
+})
+
+y dentro va las ejecuciones.
+con jquery puedo hacer llamado a elementos del dom poniedo $("#iddelelemento") y podemmos 
+utilizar  cada una de las funciones que sobre este se pueden ejecutar
+
+tambien en js se pueden pasar objetos de tipo json a algunas funciones {clave: valor}
