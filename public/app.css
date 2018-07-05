@@ -7019,3 +7019,7 @@ body {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0); }
+
+.modal-cam {
+  width: 700px !important;
+  height: 700px !important; }

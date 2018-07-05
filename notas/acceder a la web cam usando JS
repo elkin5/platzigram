@@ -33,3 +33,44 @@ con jquery puedo hacer llamado a elementos del dom poniedo $("#iddelelemento") y
 utilizar  cada una de las funciones que sobre este se pueden ejecutar
 
 tambien en js se pueden pasar objetos de tipo json a algunas funciones {clave: valor}
+
+ahora se desea que al presionar sobre la camara se pongan un preview de la imagen y la opcion para 
+subirla o descartarla
+
+para poner el picture preview y quitar la camara vamos a valermos de la 
+clase hide y se va autilizar js para poner  la clase hide a los elementos que se deben ocultar
+
+
+para ello agragamos la funcionalidad en el index.js de la carpeta 
+entonces debemos obtener todos los botones que acabamos de crear y todos los
+elementos que acabamos de crear
+
+se hace con
+const picturePreview = $('#picturePreview');
+
+para acceder a los elementos del dom se puedehacer con html o con jquery
+
+los parametros no son necesarios en js al momento de tomar un evento
+de otro modo deberia lleva como parametro la funcion un evento
+cancelpicture.click(function(ev){})
+ej: cancelpicture.click(reset)
+
+las cosas que sean necesarias antes de cargar el dom deben estar antes de la funcion
+ que se ejecuta despues de cargar el dom y lo que no necesita ser ejecutado va despues de
+ ls funcion que se ejecuta al final del dom
+
+ cuando se desea que una fecha tome el timestam se usa un +
+
+Nota: recordar que cuando se pone () es porque sse ejecuta cuando no se pone solo hace el 
+llamado a la funcion osea va a ese codigo y lo ejecuta, cuando paso una funcion a un 
+click no estoy trabajando con su ejecucion solamente le extoy pasando un codigo 
+para que haga lo que esta en esa funcion. cuando se hace un simple paso o un callback
+no se usa this
+
+Nota2: cuando declaro una funcion con var name = function () {} se dice que la funcion
+solo me sirve cuando su codigo se ha ejecutado, ademas podria redefinirla si fuese necesario.
+
+para poner un elemento antes de todos los que ya tienes se utiliza un prepend de jquery
+
+si tengo el tratamiento de un click y nuevamente doy click entonces se van a ir acumulando
+por lo tanto debo sacarlos esto se hace con elemento.off('click')

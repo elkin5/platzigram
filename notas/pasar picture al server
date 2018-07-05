@@ -15,4 +15,3 @@ cambiamos los datos de la carpeta donde se descargan las cosas, y tenemos el nom
 del archivo y la fecha, nos falta la extension para esto se utiliza un modulo npm
 
 el evento this dentro del onsubmit contiene la data del formulario que lo dispara
-
