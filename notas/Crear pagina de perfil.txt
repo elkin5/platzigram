@@ -1,0 +1,31 @@
+crear delay
+setTimeout(() => {
+    res.send(pictures);
+  }, 2000);
+
+vamos a iniciar creando el nuevo modulo o directorio que contendra la informacion
+del usuario de modo que cuando se le de al link del perfil nos lleve a ello
+para ello debemos mapear la ruta para uq page la libreria utilizada para  el manejo 
+de las rutas, pueda reconocerla y pueda definirla y llevarnos a travez del navegador
+
+los nuevos estandares utilizan import
+y para exportar en pagemodule.export = functionalgo
+
+ahora export default functionalgo o cualquier cosa
+para importar solo una parte del modulo o una sola funcion del modulo
+utilizamos { funcion } 
+
+para poner um parametro al llamar a una url usamos : :parametro
+esta pagina tambien utiliza el header entonces vamos a importar el header
+  
+lo que se pone despues de las comas son middlewares y estos middlewaresson funciones
+y lo que pasa cuando caigamos a esa ruta es que se van a ejecutar en cadena 
+siempre y cuando se llame a la funcion nex 
+donde cada middleware contiene los parametros ctx contexto
+y next
+
+para obtener el html de un elemnto del dom lo hacemos con
+var a  = document.getElementById('elemento')
+
+titleexpress yo creo que es para cambiar el titulo desde el lado servidor
+

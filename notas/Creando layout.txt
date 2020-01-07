@@ -4,7 +4,7 @@ para que se refresque con el signup o el signin segun sea necesario.
 
 con los template string tenemos los ${} que permiten poner contenido dentro variables 
 para esto ponemos a landing una funcion.
-las funciones en javascript pueden ser annimas pero de ocurrir una error sera mas dificil
+las funciones en javascript pueden ser anonimas pero de ocurrir una error sera mas dificil
 encontrar donde ocurrio.
 
 cuando vamos a un modulo o carpeta si necesitamos llamar la principal y se encuentra con el nombre 

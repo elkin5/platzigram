@@ -67,9 +67,8 @@ app.get("/api/pictures", function (req, res) {
     }
   ];
 
-  setTimeout(() => {
-    res.send(pictures);
-  }, 2000);
+  res.send(pictures);
+  
 });
 
 // middleware para subir la picture
